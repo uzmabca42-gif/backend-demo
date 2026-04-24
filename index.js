@@ -12,6 +12,10 @@ app.get("/secret", (req, res) => {
     res.send("secret is:" + SECRET);
 });
 
+app.get("/test", (req, res) => {
+    res.send("Auto deploy CI/CD pipline");
+});
+
 app.listen(PORT, () => {
     console.log("Server running on port" + PORT)
 });
