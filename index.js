@@ -2,9 +2,14 @@ const express = require("express");
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+const SECRET=process.env.JWT_SECRET || "defaultsecret";
 
 app.get("/", (req, res) => {
-    res.send("Hello, Backend is working!");
+    res.send("Backend is running with environmental!");
+
+});
+app.get("/secret", (req, res) => {
+    res.send("secret is:" + SECRET);
 });
 
 app.listen(PORT, () => {
